@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class Gamemanager : MonoBehaviour
 {
-    public static GameManager instance;
-    private int scoreinstanciado;
-
+    public static Gamemanager instance;
+    public int scoreinstanciado;
+     
     private void Awake()
     {
         if (instance == null)
@@ -34,11 +34,11 @@ public class GameManager : MonoBehaviour
     public void AddScore()
     {
         instance.scoreinstanciado += 1;
+        Debug.Log(scoreinstanciado);
     }
 
     public int GetScore()
     {
         return instance.scoreinstanciado;
-
     }
 }
